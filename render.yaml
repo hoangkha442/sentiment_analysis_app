@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sentiment-analysis
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free
+    region: singapore
+    envVars:
+      - key: PORT
+        value: 10000

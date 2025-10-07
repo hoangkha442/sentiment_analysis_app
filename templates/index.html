@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sentiment Analysis (EN + VI)</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-text">
+          <h1>Sentiment AI</h1>
+          <p>English &amp; Tiếng Việt</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="nav-item active" href="#">Phân tích</a>
+        <a class="nav-item disabled" href="#" title="Coming soon">Lịch sử</a>
+        <a class="nav-item disabled" href="#" title="Coming soon">Cấu hình</a>
+      </nav>
+      <footer class="sidebar-footer">
+        <small>&copy; 2025—Demo</small>
+      </footer>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <h2>Phân tích cảm xúc</h2>
+        <div class="right">
+          <span class="badge">PhoBERT + SST-2</span>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <div class="col">
+            <label for="lang">Ngôn ngữ</label>
+            <select id="lang">
+              <option value="auto">Tự động</option>
+              <option value="vi" selected>Tiếng Việt</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="text">Nội dung cần phân tích</label>
+        <textarea
+          id="text"
+          rows="6"
+          placeholder="Nhập nội dung... Ví dụ: Mình rất thích sản phẩm này! / I absolutely love this!"
+        ></textarea>
+
+        <div class="actions">
+          <button id="analyzeBtn">Phân tích</button>
+        </div>
+
+        <div id="loader" class="loader hidden">
+          <div class="spinner"></div>
+          <p>Đang phân tích...</p>
+        </div>
+
+        <div id="result" class="result hidden">
+          <h3>Kết quả</h3>
+          <div class="result-grid">
+            <div class="result-item">
+              <span class="label">Ngôn ngữ</span>
+              <span id="resLang" class="value">—</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Nhận định</span>
+              <span id="resLabel" class="value badge-lg">—</span>
+            </div>
+            <div class="result-item">
+              <span class="label">Độ tin cậy</span>
+              <span id="resScore" class="value">—</span>
+            </div>
+          </div>
+
+          <div id="resBars" class="bars"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/main.js"></script>
+  </body>
+</html>
