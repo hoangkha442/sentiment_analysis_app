@@ -27,7 +27,21 @@ templates/
 
 ## Hướng dẫn chạy
 
-### 1. Cài đặt môi trường
+### 1. clone website
+
+```sh
+git clone https://github.com/hoangkha442/sentiment_analysis_app.git
+```
+
+```sh
+cd sentiment_analysis_app
+```
+
+```sh
+pip install -r requirements.txt
+```
+
+### 2. Cài đặt môi trường
 
 - Yêu cầu Python 3.10+
 - Cài đặt các thư viện cần thiết:
@@ -36,21 +50,15 @@ templates/
 pip install -r requirements.txt
 ```
 
-### 2. Chạy ứng dụng Flask
+### 3. Chạy ứng dụng Flask
 
 ```sh
 python main.py
 ```
 
-Hoặc chạy bằng Gunicorn (theo cấu hình render.yaml):
+Ứng dụng sẽ chạy tại địa chỉ: [http://localhost:7860](http://localhost:7860)
 
-```sh
-gunicorn main:app
-```
-
-Ứng dụng sẽ chạy tại địa chỉ: [http://localhost:7860](http://localhost:7860) (hoặc cổng PORT bạn cấu hình).
-
-### 3. Sử dụng
+### 4. Sử dụng
 
 - Truy cập trang web.
 - Nhập nội dung cần phân tích.
