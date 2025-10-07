@@ -37,10 +37,6 @@ git clone https://github.com/hoangkha442/sentiment_analysis_app.git
 cd sentiment_analysis_app
 ```
 
-```sh
-pip install -r requirements.txt
-```
-
 ### 2. Cài đặt môi trường
 
 - Yêu cầu Python 3.10+
